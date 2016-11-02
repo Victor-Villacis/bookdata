@@ -1,2 +1,2 @@
 # bookdata
-A restful API service connecting to the Barnes&amp;Noble API
+A restful API service using node.js and MongoDB
