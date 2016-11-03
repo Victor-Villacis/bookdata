@@ -1,2 +1,2 @@
 # bookdata
-A restful API service using node.js and MongoDB
+Building a RESTful API service using Node.js, Angular and MongoDB
