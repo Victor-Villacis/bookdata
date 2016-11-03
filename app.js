@@ -61,6 +61,17 @@ app.put('/api/genres/:_id', function(req,res){
     });
 });
 
+app.delete('/api/genres/:_id', function(req,res){
+  //body parser allows us to acces anything that comes into the form
+    var id = req.params._id;
+    //this is just gonna take in an id and a call back
+    Genre.removeGenre(id, function(err, genre){
+      if(err){
+        throw err;
+      }
+      res.json(genre);
+    });
+});
 
 
 // //put takes in an :id
@@ -118,6 +129,19 @@ app.put('/api/books/:_id', function(req,res){
       res.json(book);
     });
 });
+
+app.delete('/api/books/:_id', function(req,res){
+  //body parser allows us to acces anything that comes into the form
+    var id = req.params._id;
+    //this is just gonna take in an id and a call back
+    Book.removeBook(id, function(err, book){
+      if(err){
+        throw err;
+      }
+      res.json(book);
+    });
+});
+
 //localhost
 app.listen(3000);
 console.log('Running on port 3000');
