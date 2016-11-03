@@ -4,6 +4,8 @@ var app         = express();
 var bodyParser  = require('body-parser')
 var mongoose    = require('mongoose');
 
+//specify what folder I want to use as a static folder, public directory
+app.use(express.static(__dirname+'client'))
 //initialize body parser
 app.use(bodyParser.json());
 
