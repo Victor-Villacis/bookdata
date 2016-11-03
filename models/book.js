@@ -49,3 +49,8 @@ module.exports.getBookById = function(id, callback) {
   //mongoose method
   Book.findById(id, callback)
 }
+
+// Add Book
+module.exports.addBook = function(book, callback) {
+  Book.create(book, callback);
+}
