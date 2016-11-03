@@ -54,3 +54,16 @@ module.exports.getBookById = function(id, callback) {
 module.exports.addBook = function(book, callback) {
   Book.create(book, callback);
 }
+
+//Update Book //Look into set query to update indiviual fields
+module.exports.updateBook = function(id, book, options, callback) {
+  var query = {_id: id};
+  var update = {
+    title: book.title,
+    genre:book.genre,
+    description:book.description,
+    author:book.author
+    
+  }
+  Book.findOneAndUpdate(query, update, options, callback);
+}
