@@ -1,0 +1,25 @@
+<!-- I put in the directive ng-init (call it) since I put scope.books in a function   -->
+<div class="panel panel-default" ng-init="getBooks()">
+    <div class="panel-heading">
+        <h3 class="panel-title">Latest Books</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <!--I am passing in an array, through the results which is scope.books, I need to loop through the list so I use ng repeat    -->
+            <div ng-repeat="book in books">
+                <!-- each book will have a div with 3 columns  -->
+                <div class="col-md-6">
+                    <div class="col-md-6">
+                        <h4>{{book.title}} title</h4>
+                        <p>{{book.description}} description</p>
+                        <p>{{book.publisher}} publisher</p>
+                        <a class="btn btn-primary" href="#/books/details/{{book._id}}">View Details</a>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="{{book.image_url}}" alt="link broke, please paste img_url" class="img-rounded center-block">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
