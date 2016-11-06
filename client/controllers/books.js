@@ -27,7 +27,7 @@ myApp.controller('BooksController', ['$scope', '$http', '$location',
         }
     }
 ]);
-
+// testing git plus
 
 //do not use the minify version of angular,so to avoid of it breaking in minified you need to specify it here
 //scope binds the controller to the view, http aloows us to get request and post, route params allows us to get variable
